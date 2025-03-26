@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event Handling Example</title>
+</head>
+<body>
+    <h1>Event Handling in JavaScript</h1>
+
+    <!-- Display a message -->
+    <p id="message">Click the button to change this text.</p>
+
+    <!-- Button that will trigger an event -->
+    <button id="changeTextButton">Change Text</button>
+
+    <script>
+       
+        // This script demonstrates event handling in JavaScript.
+
+        // Select the button element using its ID
+        const button = document.getElementById('changeTextButton');
+
+        //  Select the message element where the text will be changed
+        const message = document.getElementById('message');
+
+        //  Create an event handler function
+        // This function will be called when the button is clicked
+        function changeMessageText() {
+            message.textContent = "The text has been changed!";  // Changing the content of the paragraph
+        }
+
+        // Add an event listener to the button
+        // This listens for a 'click' event and calls the changeMessageText function when the button is clicked
+        button.addEventListener('click', changeMessageText);
+
+        // Explanation of event handling
+        // - The event listener waits for the user to click on the button.
+        // - When clicked, the event triggers the changeMessageText function.
+        // - The changeMessageText function changes the text of the <p> element.
+    </script>
+</body>
+</html>
